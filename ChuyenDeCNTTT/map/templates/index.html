@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <title>Home Page</title>
+    <style>
+        #navbar{
+            padding: 20px 150px;
+            color: white;
+        }
+        .headed-right{
+            font-size: large;
+            font-weight: 500;
+            cursor: pointer;
+
+        }
+
+        .text-desg{
+            font-size: large;
+            font-weight: 500;
+        }
+
+        .center{
+            height: 200px;
+        }
+
+        h1{
+            color: white;
+            margin-bottom: 40px;
+        }
+
+        .center span{
+            color: white;
+            font-weight: 500;
+        }
+        #dropdownMenuButton{
+            font-size: large;
+            font-weight: 500;
+        }
+        #output {
+            width: 494px;
+            height: 206px;
+            max-height: 206px;
+            border: 1px solid rgb(207, 207, 207);
+            background-color: white;
+            padding: 7px 8px;
+            border-radius: 5px;
+            overflow-y: scroll;
+
+        }
+        #input{
+            position: absolute;
+            overflow-y: scroll;
+        }
+        .textt{
+            color: blueviolet;
+
+        }
+        ::-webkit-scrollbar{
+            width: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: rgb(16, 143, 255);
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            border-radius: 10px;
+            margin-top: 8px;
+            margin-bottom: 8px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgb(119, 185, 243);
+        }
+
+        .container{
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+        body{
+            background-color: rgb(240, 243, 246);
+        }
+        #output:hover {
+            border-color: #93acf4;
+            box-shadow: 0 0 0 0.2rem rgba(52, 149, 246, 0.444);
+        }
+        .dropdown:hover .dropdown-menu {
+            display: block;
+            margin-top: 0;
+        }
+        .headed-right{
+            color: white;
+        }
+
+
+    </style>
+</head>
+<body>
+     <!--Navbar-->
+    <div class="header" style="background-image: linear-gradient( 100deg, #72EDF2 0%,#72EDF2 10%, #5151E5 75%, #5151E5 100%);">
+        <nav class="navbar navbar-expand-lg" id = 'navbar' style="background-image: linear-gradient( 100deg, #72EDF2 0%,#72EDF2 10%, #5151E5 75%, #5151E5 100%);">
+            <div class="mx-3 navbar-brand">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-body-text mr-2" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M0 .5A.5.5 0 0 1 .5 0h4a.5.5 0 0 1 0 1h-4A.5.5 0 0 1 0 .5Zm0 2A.5.5 0 0 1 .5 2h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5Zm9 0a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5Zm-9 2A.5.5 0 0 1 .5 4h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5Zm5 0a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5Zm7 0a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5Zm-12 2A.5.5 0 0 1 .5 6h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5Zm8 0a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5Zm-8 2A.5.5 0 0 1 .5 8h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5Zm7 0a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5Zm-7 2a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 0 1h-8a.5.5 0 0 1-.5-.5Zm0 2a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5Zm0 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5Z"/>
+                </svg>
+                <span class="fs-4 text-desg logo"><h3 style="float: right;">YAKE</h3></span>
+            </div>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                </ul>
+                <a href="#" class="headed-right my-2 my-sm-0 mx-3">Extractor</a>
+                <a href="home" class="headed-right my-2 my-sm-0 mx-3">Preview Data</a>
+                <a href="data" class="headed-right my-2 my-sm-0 mx-3">Preprocess Data</a>
+                <div class="headed-right my-2 my-sm-0 mx-3">
+                    <div class="dropdown">
+                        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background-color: #5151E5 ; color: white;">
+                          More
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                          <a class="dropdown-item" href="#">Action</a>
+                          <a class="dropdown-item" href="#">Another action</a>
+                          <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </nav>
+        <!--End Navbar-->
+        <div class="center" style="background-image: linear-gradient( 100deg, #72EDF2 0%,#72EDF2 10%, #5151E5 75%, #5151E5 100%);">
+            <div class="text-center mt-2">
+                <h1>Keyword Extractor</h1>
+            </div>
+            <div class="text-center">
+                <span>Sử dụng công cụ trích xuất từ ​​khóa <br> để tự động trích xuất các từ khóa và cụm từ <br> trong văn bản của bạn.</span>
+            </div>
+        </div>
+    </div>
+    <div class="form-header text-desg text-primary text-center mt-5 ">
+        <h2>TỰ ĐỘNG TRÍCH XUẤT TỪ KHÓA:</h2>
+    </div>
+    <form action="">
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col">
+                    <label class="text-desg mb-3 mt-3">Your own text</label>
+                </div>
+            </div>
+            <div class="row" >
+                <div class="col">
+                    <div class="form-outline">
+                        <textarea class="form-control" id="input" rows="8" style="resize: none;" spellcheck="false"></textarea>
+                            <!-- Lập Trình Không Khó là blog chia sẻ kiến thức lập trình miễn phí . Do vậy , tệp khách hàng của chúng tôi chủ yếu là đối tượng học lập trình , độ tuổi từ 18 - 24 và hầu hết là người dùng đến từ Việt Nam . Lập Trình Không Khó có hơn 300.000 người dùng trung bình mỗi tháng , đóng góp lượt xem trang trung bình mỗi ngày trên 20.000 views . Trong đó , trên 80 % lượng truy cập đến từ công cụ tìm kiếm ( Google , Cốc Cốc , ... ) . Ngoài ra , nhóm Lập Trình Không Khó trên Facebook hoạt động sôi nổi có tới 30.000 thành viên .Lập Trình Không Khó là blog chia sẻ kiến thức lập trình miễn phí . Do vậy , tệp khách hàng của chúng tôi chủ yếu là đối tượng học lập trình , độ tuổi từ 18 - 24 và hầu hết là người dùng đến từ Việt Nam . Lập Trình Không Khó có hơn 300.000 người dùng trung bình mỗi tháng , đóng góp lượt xem trang trung bình mỗi ngày trên 20.000 views . Trong đó , trên 80 % lượng truy cập đến từ công cụ tìm kiếm ( Google , Cốc Cốc , ... ) . Ngoài ra , nhóm Lập Trình Không Khó trên Facebook hoạt động sôi nổi có tới 30.000 thành viên .</textarea> -->
+                    </div>
+                </div>
+                <div class="col-1">
+                    <div class="spinner-border" id="rolls" role="status" style="margin-left: 30px; margin-top: 90px; display: none;">
+                        <span class="sr-only">Loading...</span>
+                    </div>
+                </div>
+                <div class="col" >
+                    <div class="form-group" id="output">
+                        <!-- <span class='textt' >Lập Trình</span> Không Khó là <span class='textt' >blog chia</span> sẻ <span class='textt' >kiến thức</span> <span class='textt' >lập trình</span> <span class='textt' >miễn phí</span> . Do vậy , <span class='textt' >tệp khách</span> hàng của <span class='textt' >chúng tôi</span> <span class='textt' >chủ yếu</span> là đối tượng học <span class='textt' >lập trình</span> , độ tuổi từ 18 - 24 và hầu hết là người dùng đến từ <span class='textt' >Việt Nam</span> . <span class='textt' >Lập Trình</span> Không Khó có hơn 300.000 người dùng <span class='textt' >trung bình</span> mỗi tháng , <span class='textt' >đóng góp</span> lượt xem trang <span class='textt' >trung bình</span> mỗi ngày trên 20.000 views . Trong đó , trên 80 % <span class='textt' >lượng truy</span> cập đến từ công cụ <span class='textt' >tìm kiếm</span> ( Google , <span class='textt' >Cốc Cốc</span> , ... ) . Ngoài ra , nhóm <span class='textt' >Lập Trình</span> Không Khó trên Facebook hoạt động sôi nổi có tới 30.000 thành viên . -->
+                        <!-- <span class='textt' >Lập Trình</span> Không Khó là <span class='textt' >blog chia</span> sẻ <span class='textt' >kiến thức</span> <span class='textt' >lập trình</span> <span class='textt' >miễn phí</span> . Do vậy , <span class='textt' >tệp khách</span> hàng của <span class='textt' >chúng tôi</span> <span class='textt' >chủ yếu</span> là đối tượng học <span class='textt' >lập trình</span> , độ tuổi từ 18 - 24 và hầu hết là người dùng đến từ <span class='textt' >Việt Nam</span> . <span class='textt' >Lập Trình</span> Không Khó có hơn 300.000 người dùng <span class='textt' >trung bình</span> mỗi tháng , <span class='textt' >đóng góp</span> lượt xem trang <span class='textt' >trung bình</span> mỗi ngày trên 20.000 views . Trong đó , trên 80 % <span class='textt' >lượng truy</span> cập đến từ công cụ <span class='textt' >tìm kiếm</span> ( Google , <span class='textt' >Cốc Cốc</span> , ... ) . Ngoài ra , nhóm <span class='textt' >Lập Trình</span> Không Khó trên Facebook hoạt động sôi nổi có tới 30.000 thành viên . -->
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <button type="button" class="btn btn-primary btn-lg mb-3" id="btn-extract">Extraction</button>
+                </div>
+                <div class="col-1">
+                </div>
+            </div>
+             </div>
+        </form>
+
+    <div style="height: 350px;">
+    </div>
+    <footer class="text-center text-white" style="background-color: rgb(240, 243, 246);">
+        <!-- Grid container -->
+        <div class="container pt-1">
+          <!-- Section: Social media -->
+          <section class="mb-4">
+            <!-- Facebook -->
+            <a
+              class="btn btn-link btn-floating btn-lg text-dark m-1"
+              href="#!"
+              role="button"
+              data-mdb-ripple-color="dark"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <!-- Google -->
+            <a
+              class="btn btn-link btn-floating btn-lg text-dark m-1"
+              href="#!"
+              role="button"
+              data-mdb-ripple-color="dark"
+              ><i class="fab fa-google"></i
+            ></a>
+            <!-- Linkedin -->
+            <a
+              class="btn btn-link btn-floating btn-lg text-dark m-1"
+              href="#!"
+              role="button"
+              data-mdb-ripple-color="dark"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+            <!-- Github -->
+            <a
+              class="btn btn-link btn-floating btn-lg text-dark m-1"
+              href="#!"
+              role="button"
+              data-mdb-ripple-color="dark"
+              ><i class="fab fa-github"></i
+            ></a>
+          </section>
+          <!-- Section: Social media -->
+        </div>
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+        <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+          © 2020 Copyright:
+          <a class="text-dark" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+        </div>
+        <!-- Copyright -->
+      </footer>
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+    <script>
+        btn = document.getElementById("btn-extract")
+        var check = 0
+        var rsdata;
+        btn.addEventListener("click", function() {
+            var result = document.getElementById("input").value;
+            document.getElementById("rolls").style.display = 'block';
+            btn.disabled = true;
+            $.ajax({
+                type: "GET",
+                url: '/extract',
+                data: {
+                    "result": result,
+                },
+                dataType: "json",
+                success: function (data) {
+                    rsdata = data
+                    btn.disabled = false;
+                    document.getElementById("rolls").style.display = 'none';
+                    fill_data(rsdata)
+                },
+                failure: function () {
+                    alert("failure");
+                }
+            });
+        });
+
+        function fill_data(data) {
+            extract = data['text'];
+            var outputBox = document.getElementById("output");
+            outputBox.innerHTML = "";
+            outputBox.innerHTML =  extract;
+        }
+    </script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+    -->
+</body>
+</html>

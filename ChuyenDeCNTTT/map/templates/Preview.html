@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center><h1>DataSet Preview</h1></center>
+    {% for line in doc%}
+    <div>
+        Title : {{ line.title }}
+    </div>
+    <div>
+        Introduction
+    </div>
+    <div>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;{{ line.doc }}</p>
+    </div>
+    <div>
+        <br>
+    </div>
+    {% endfor %}
+</body>
+</html>
